@@ -17,6 +17,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+//    [self.navigationItem.rightBarButtonItem  initWithTitle:@"Exit" style:UIBarStyleDefault target:nil action:nil];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Exit"
+                                                                              style:UIBarButtonItemStylePlain
+                                                                             target:self
+                                                                             action:@selector(exitHouse:)];
+}
+
+- (void) exitHouse:(id)sender{
+    [[self navigationController] popToRootViewControllerAnimated:YES];
 }
 
 
